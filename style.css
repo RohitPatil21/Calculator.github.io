@@ -18,21 +18,55 @@ html{
 
 #calculator{
     background-color: #4b4a4a;
-    width: 30vw;
-    height: 40vh;
+    width: 31vw;
+    height: 46vh;
     padding: 1rem;
 }
 
-#displaybox{
+.displaybox{
     background-color: aliceblue;
-    width: 100%;
+    width: 95%;
     height: 20%;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     color: red;
     font-size: 3rem;
+    padding-left: 1rem;
+    font-weight: 700;
+    border: none;
+    outline: none;
 }
-.number_button{
+.btn{
     padding: 1rem;
     width: 10rem;
     outline: none;
+    outline: none;
+    margin: 5px;
+}
+
+.btn:hover{
+    background-color: #2add2a;
+}
+
+#btnmul{
+    width: 7rem;
+}
+
+#btnsub{
+    width: 7rem;
+}
+
+#btnsum{
+    width: 7rem;
+}
+
+#devide{
+    width: 7rem;
+}
+
+#clear{
+    background-color: red;
+    color: white;
+    width: 98%;
+    height: 3rem;
+    margin-top: 5px;
 }

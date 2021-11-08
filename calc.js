@@ -1,62 +1,28 @@
-let result=''
-let operation=''
-let secondoperand=''
-let firstoperand=''
-
-const single_button= e =>{
-    if(operation==''){
-        firstoperand+=e.target.dataset.number
-        result+=e.target.dataset.number
-        display()
-    }else{
-        secondoperand+=e.target.dataset.number
-        result+=e.target.dataset.number
-        display()
-    }
-}
-const getoperation= event =>{
-    operation=event.target.innerText
-    result=result+operation
-    display()
-}
-const operations=() =>{
-    if(operation=='+'){
-        result=Number(firstoperand)+Number(secondoperand) 
-        console.log(result)
-    }
-    else if(operation=='-'){
-        result=Number(firstoperand)-Number(secondoperand)        
-    }
-    else if(operation=='*'){
-        result=Number(firstoperand)*Number(secondoperand)        
-    }
-    else if(operation=='/'){
-        result=Number(firstoperand)/Number(secondoperand)        
-    }
+// insert the number in textview.
+function insert(num) 
+{
+document.getElementById('displaybox').value = document.getElementById('displaybox').value + num;
 }
 
-const equal=()=>{
-    operations()
-    display()
+// Use equal() function to return the result based on passed values.
+function equal()
+{
+var exp = document.getElementById('displaybox').value;
+if(exp)
+{
+document.getElementById('displaybox').value = eval(exp)
 }
-const clear=()=>{
-    result=''
-    display()
-}
-let equalbut=document.getElementById('equal_button')
-equalbut.addEventListener('click',equal)
-
-// let clearbut=document.getElementById('clearbutton')
-// clearbut.addEventListener('click',clear)
-const display=() =>{
-    document.getElementById("displaybox").innerText=result
 }
 
-let number_buttons=document.querySelectorAll('.number_button')
-number_buttons.forEach(single_number_button =>{
-    single_number_button.addEventListener('click',single_button)
-})
-let get_operation=document.querySelectorAll('.operation')
-get_operation.forEach(op => {
-    op.addEventListener('click',getoperation)
-})
+
+function backspace()
+{
+var exp = document.getElementById('displaybox').value;
+document.getElementById('displaybox').value = exp.substring(0, exp.length - 1);
+}
+
+
+// clear input box function 
+function clearBox(){
+    document.getElementById('displaybox').value = ' ';
+}

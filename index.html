@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,43 +8,51 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>Calculator</title>
 </head>
+
 <body>
-    
+
     <!-- main wrapper div  -->
     <div id="mainwrapper">
         <!-- calculator div  -->
         <div id="calculator">
             <!-- display box  -->
-            <div id="displaybox"></div>
+            <input class= "displaybox" name = "displaybox" id="displaybox">
 
             <!-- Buttons  -->
-            <button class="number_button">7</button>
-            <button class="number_button">8</button>
-            <button class="number_button">9</button>
-            <button class="number_button" id="add_button">+</button>
-            <br><br>
 
-            <button class="number_button">4</button>
-            <button class="number_button">5</button>
-            <button class="number_button">6</button>
-            <button class="number_button">-</button>
-            <br><br>
+            <button class="btn" value="7" onclick="insert(7)">7</button>
+            <button class="btn" value="8" onclick="insert(8)">8</button>
+            <button class="btn" value="9" onclick="insert(9)">9</button>
+            <button class="btn" value="+" onclick="insert('+')" id="btnsum">+</button>
 
-            <button class="number_button">1</button>
-            <button class="number_button">2</button>
-            <button class="number_button">3</button>
-            <button class="number_button">*</button>
-            <br><br>
+            
 
-            <button class="number_button">0</button>
-            <button class="number_button">AC</button>
-            <button class="number_button" id="equals_button">=</button>
-            <button class="number_button">/</button>
+
+            <button class="btn" value="4" onclick="insert(4)">4</button>
+            <button class="btn" value="5" onclick="insert(5)">5</button>
+            <button class="btn" value="6" onclick="insert(6)">6</button>
+            <button class="btn" value="-" onclick="insert('-')" id="btnsub">-</button>
+            
+
+            <button class="btn" value="1" onclick="insert(1)">1</button>
+            <button class="btn" value="2" onclick="insert(2)">2</button>
+            <button class="btn" value="3" onclick="insert(3)">3</button>
+            <button class="btn" value="x" onclick="insert('*')" id="btnmul">X</button>
+            
+            
+            <button class="btn" value="0" onclick="insert(0)">0</button>
+            <button class="btn" value="." onclick="insert('.')">.</button>
+            <button class="btn" value="=" onclick="equal()" id="btnequal">=</button>
+            <button class="btn" value="/" onclick="insert('/')" id="devide">/</button>
+
+            <button id="clear" onclick="clearBox()">Clear</button>
+            
         </div>
     </div>
 
-<!-- JavaScript Code  -->
+    <!-- JavaScript Code  -->
     <script src="calc.js"></script>
 
 </body>
+
 </html>
