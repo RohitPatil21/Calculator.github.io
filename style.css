@@ -1,0 +1,38 @@
+html{
+    font-size: 10px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#mainwrapper{
+    background-color: pink;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#calculator{
+    background-color: #4b4a4a;
+    width: 30vw;
+    height: 40vh;
+    padding: 1rem;
+}
+
+#displaybox{
+    background-color: aliceblue;
+    width: 100%;
+    height: 20%;
+    margin-bottom: 2rem;
+    color: red;
+    font-size: 3rem;
+}
+.number_button{
+    padding: 1rem;
+    width: 10rem;
+    outline: none;
+}
